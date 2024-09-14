@@ -5,6 +5,11 @@ module RspackRails
         def self.load
             @mutex.synchronize do
                 manifest_path = Rails.root.join('public', 'packs', 'manifest.json')
+
+                unless File.exist?(manifest_path)
+                    raise "Manifest file not found at #{manifest_path}. Make sure Rspack has compiled your assets."
+                end
+
                 mtime = File.mtime(manifest_path)
         
                 if @manifest.nil? || @manifest_mtime != mtime
