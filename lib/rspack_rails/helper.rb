@@ -1,3 +1,5 @@
+require 'rspack_rails/manifest'
+
 module RspackRails
     module Helper
       def javascript_pack_tag(name, **options)
