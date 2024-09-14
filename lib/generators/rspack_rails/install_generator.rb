@@ -13,7 +13,7 @@ module RspackRails
         end
   
         def add_package_json_dependencies
-          run 'yarn add @rspack/cli @rspack/core rspack-manifest-plugin --dev'
+          run 'yarn add @rspack/cli @rspack/core rspack-manifest-plugin clean-webpack-plugin --dev'
         end
       end
     end
