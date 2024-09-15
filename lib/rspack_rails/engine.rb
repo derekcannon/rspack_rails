@@ -1,4 +1,6 @@
-require "rspack_rails/helper"
+# frozen_string_literal: true
+
+require 'rspack_rails/helper'
 
 module RspackRails
   class Engine < ::Rails::Engine

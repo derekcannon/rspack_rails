@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspack_rails/manifest'
 
 module RspackRails
