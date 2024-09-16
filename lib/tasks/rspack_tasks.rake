@@ -16,6 +16,6 @@ namespace :rspack do
   desc 'Start Rspack dev server'
   task 'dev_server' do
     node_env = ENV['NODE_ENV'] || 'development'
-    sh "NODE_ENV=#{node_env} yarn rspack serve --config rspack.config.js"
+    sh "NODE_ENV=#{node_env} USE_DEV_SERVER=true yarn rspack serve --config rspack.config.js"
   end
 end
