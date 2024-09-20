@@ -11,9 +11,6 @@ module RspackRails
     end
 
     rake_tasks do
-      # Load all .rake files from the tasks directory
-      Dir[File.join(__dir__, '../tasks/**/*.rake')].each { |f| load f }
-
       # Enhance the assets:precompile task
       Rake::Task['assets:precompile'].enhance(['rspack:compile'])
     end
